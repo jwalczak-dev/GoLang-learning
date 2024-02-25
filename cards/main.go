@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 var deckSize int
 
 func main() {
@@ -13,9 +11,11 @@ func main() {
 	cards = append(cards, "Six of Spades")
 	// fmt.Println(cards)
 
-	for index, card := range cards {
-		fmt.Println(index, card)
-	}
+	// for index, card := range cards {
+	// 	fmt.Println(index, card)
+	// }
+
+	cards.print()
 }
 
 func newCard() string {
