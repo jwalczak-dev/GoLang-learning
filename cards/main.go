@@ -24,6 +24,14 @@ func main() {
 	remainingCards.print()
 
 	cards.print()
+
+	// type conversion - Example with creating slice of bytes from string
+	greeting := "Hi there!"
+	fmt.Println([]byte(greeting))
+
+	fmt.Println(cards.toString())
+
+	cards.saveToFile("my_cards")
 }
 
 func (d deck) print2() {
