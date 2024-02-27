@@ -45,3 +45,20 @@ func (d deck) toString() string {
 func (d deck) saveToFile(fileName string) error {
 	return os.WriteFile(fileName, []byte(d.toString()), 0666)
 }
+
+func newDeckFromFile(fileName string) deck {
+	// deck := deck{}
+	bs, err := os.ReadFile(fileName)
+	if err != nil {
+		fmt.Println("Error:", err)
+		os.Exit(1)
+	}
+
+	cardsSlice := strings.Split(string(bs), ",")
+	// for _, card := range cardsSlice {
+	// 	deck = append(deck, card)
+	// }
+
+	return deck(cardsSlice)
+
+}

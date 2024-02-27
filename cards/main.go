@@ -32,6 +32,9 @@ func main() {
 	fmt.Println(cards.toString())
 
 	cards.saveToFile("my_cards")
+
+	fmt.Println("================== Deck from file ====================")
+	newDeckFromFile("my_cards").print()
 }
 
 func (d deck) print2() {
