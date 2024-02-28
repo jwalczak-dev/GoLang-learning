@@ -9,7 +9,7 @@ func main() {
 	// fmt.Println(card)
 	// printState()
 
-	cards := newDeck()
+	// cards := newDeck()
 
 	// fmt.Println(cards)
 
@@ -19,22 +19,22 @@ func main() {
 
 	// cards.print()
 
-	hand, remainingCards := deal(cards, 5)
-	hand.print()
-	remainingCards.print()
+	// hand, remainingCards := deal(cards, 5)
+	// hand.print()
+	// remainingCards.print()
 
-	cards.print()
+	// cards.print()
 
 	// type conversion - Example with creating slice of bytes from string
-	greeting := "Hi there!"
-	fmt.Println([]byte(greeting))
+	// greeting := "Hi there!"
+	// fmt.Println([]byte(greeting))
 
-	fmt.Println(cards.toString())
+	// fmt.Println(cards.toString())
 
-	cards.saveToFile("my_cards")
+	// cards.saveToFile("my_cards")
 
-	fmt.Println("================== Deck from file ====================")
-	newDeckFromFile("my_cards").print()
+	// fmt.Println("================== Deck from file ====================")
+	// newDeckFromFile("my_cards").print()
 
 	cards2 := newDeck()
 	cards2.shuffle()
