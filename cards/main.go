@@ -35,6 +35,10 @@ func main() {
 
 	fmt.Println("================== Deck from file ====================")
 	newDeckFromFile("my_cards").print()
+
+	cards2 := newDeck()
+	cards2.shuffle()
+	cards2.print()
 }
 
 func (d deck) print2() {
