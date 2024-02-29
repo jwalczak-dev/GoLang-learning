@@ -49,7 +49,6 @@ func (d deck) saveToFile(fileName string) error {
 }
 
 func newDeckFromFile(fileName string) deck {
-	// deck := deck{}
 	bs, err := os.ReadFile(fileName)
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -57,16 +56,11 @@ func newDeckFromFile(fileName string) deck {
 	}
 
 	cardsSlice := strings.Split(string(bs), ",")
-	// for _, card := range cardsSlice {
-	// 	deck = append(deck, card)
-	// }
 
 	return deck(cardsSlice)
-
 }
 
 func (d deck) shuffle() {
-
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
 
