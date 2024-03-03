@@ -14,6 +14,10 @@ func main() {
 
 	fmt.Println(alex)
 	fmt.Println(joe)
-	fmt.Printf("%+v", joe)
+	fmt.Printf("%+v\n", joe)
+
+	joe.firstName = "Joe"
+	joe.lastName = "Doe"
+	fmt.Printf("%+v\n", joe)
 
 }
