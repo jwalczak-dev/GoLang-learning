@@ -13,6 +13,8 @@ type person struct {
 	contactInfo
 }
 
+type nameT string
+
 func main() {
 	// alex := person{"Alex", "Anderson"}
 	// bob := person{firstName: "Bob", lastName: "Sponge"}
@@ -35,16 +37,24 @@ func main() {
 		},
 	}
 
-	jim.updateName("jimmy")
+	jimPointer := &jim
+	jimPointer.updateName("jimmy")
 	jim.details()
+
+	name := nameT("Jakub")
+	name.updateN("Bob")
+	fmt.Println(name)
 
 }
 
-func (p *person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (n *nameT) updateN(newName string) {
+	*n = nameT(newName)
+}
+
+func (pinterToPerson *person) updateName(newFirstName string) {
+	(*pinterToPerson).firstName = newFirstName
 }
 
 func (p person) details() {
 	fmt.Printf("%+v\n", p)
-
 }
