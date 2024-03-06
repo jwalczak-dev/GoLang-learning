@@ -29,16 +29,6 @@ func (ms MyString) FindVowels() []rune {
 	return vowels
 }
 
-func (ms MyString) FindVowels2() []rune {
-	var vowels []rune
-	for _, rune := range ms {
-		if rune == 'a' || rune == 'e' || rune == 'i' || rune == 'o' || rune == 'u' {
-			vowels = append(vowels, rune)
-		}
-	}
-	return vowels
-}
-
 func main() {
 	eb := englishBot{}
 	sb := spanishBot{}
@@ -51,7 +41,7 @@ func main() {
 	name := MyString("Sam Andersonoo")
 	// var v VowelsFinder
 	//v := name // possible since MyString implements VowelsFinder
-	fmt.Printf("Vowels are %c", name.FindVowels2())
+	fmt.Printf("Vowels are %c", name.FindVowels())
 }
 
 func printGreeting(b bot) {
